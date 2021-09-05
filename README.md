@@ -8,7 +8,8 @@
     sudo apt-get update
     sudo apt-get install -y vim python3-pip curl git
     pip3 install --upgrade pip
-    pip install docker-compose
+    pip3 install docker-compose
+    sudo apt-get install docker-compose
     ```
 
 2. 도커 설치
@@ -22,13 +23,13 @@
 1. 깃으로 코드를 다운 받은 후, 해당 폴더로 이동
 
     ```bash
-    git clone -b 2.0 https://github.com/rhsehfm33/CodeendDeploy.git && cd CodeendDeploy
+    sudo git clone -b master https://github.com/rhsehfm33/CodeendDeploy.git && cd CodeendDeploy
     ```
 
 2. 서비스 시작
 
     ```bash
-    docker-compose up -d
+    sudo docker-compose up -d
     ```
 
 처음 도커를 실행해서 구성할 시에, 최대 2분의 시간이 소요될 수 있습니다.
