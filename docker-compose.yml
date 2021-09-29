@@ -44,7 +44,7 @@ services:
       # - judger_debug=1
   
   oj-backend:
-    image: rhsehfm33/codeend:4.1
+    image: rhsehfm33/codeend:4.2
     privileged: true
     container_name: oj-backend
     restart: always
