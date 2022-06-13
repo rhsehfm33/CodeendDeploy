@@ -1,8 +1,25 @@
-## 리눅스 배포 방법
+## About project
 
-+ System: Ubuntu 18.04 LTS
+### What is this project?
+This project supports online judge system. So, if the administartor created the algorithm problem, users can solve it. If user submitted the code, the judge server will check whether it can pass the test cases or not. These are so far that had already developed in open source. </br>
+[Open Source](https://github.com/QingdaoU/OnlineJudge)
 
-1. 주요한 디팬던시 설치
+
+### The features we added
+* Firstly, all the features are implemented additionally based on the open source.
+* We applied Korean translation of this project in every GUI component.
+* We added board function which is for discussing about problems or any other topics.
+
+### Link of repository our team has been implementing
+[Codeend](https://github.com/rhsehfm33/Codeend)
+
+</br>
+
+## How to Deploy
+
+### Linux (Ubuntu 18.04 LTS)
+
+1. Install programs needed for lauching services
 
     ```bash
     sudo apt-get update
@@ -12,29 +29,34 @@
     sudo apt-get install docker-compose
     ```
 
-2. 도커 설치
+2. Install docker
 
-    Install using script: `sudo curl -sSL get.docker.com | sh`
-
+    Install using script: 
+    ```bash
+    sudo curl -sSL get.docker.com | sh
+    ```
     Other installation methods: [https://docs.docker.com/install/](https://docs.docker.com/install/)
 
-## 설치
-
-1. 깃으로 코드를 다운 받은 후, 해당 폴더로 이동
+3. Clone this repository and move to the project folder
 
     ```bash
     sudo git clone -b master https://github.com/rhsehfm33/CodeendDeploy.git && cd CodeendDeploy
     ```
 
-2. 서비스 시작
+2. Launch applications
 
     ```bash
     sudo docker-compose up -d
     ```
 
-처음 도커를 실행해서 구성할 시에, 최대 2분의 시간이 소요될 수 있습니다.
+At first, this might take few minutes for lauching.
 
-브라우저를 통해 80 또는 443 포트로 접속해서 해당 서비스를 이용할 수 있습니다.
-관리자의 경로는 '/admin' 입니다.
-기본 관리자의 아이디는 'root' 이고, 비밀번호는 'rootroot' 입니다.
-로그인 성공시 바로 관리자의 비밀번호를 바꿔주세요.
+You can use the website with ports 80, 433.
+
+The path of admin page is '\[domain-name\]/admin'.
+
+Default ID and PW of root user are same as below:</br>
+&nbsp;&nbsp;&nbsp;&nbsp;ID: root</br>
+&nbsp;&nbsp;&nbsp;&nbsp;PW: rootroot
+
+Please change the password of root user later.
